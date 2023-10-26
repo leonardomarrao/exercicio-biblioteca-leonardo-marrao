@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AcademiaDaoService {
 	private static List<Book> books = new ArrayList<>();
-	
+	/*
 	private static int booksCount = 3;
 	
 	static {
@@ -49,5 +49,5 @@ public class AcademiaDaoService {
 			}
 		}
 		return null;
- 	}
+ 	}*/
 }

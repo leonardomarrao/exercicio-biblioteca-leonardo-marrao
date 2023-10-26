@@ -30,7 +30,8 @@ public class BookDbControler {
 	}
 	
 	@GetMapping("/db/book/{id}")
-	public Optional<Book> retrieveLivro(@PathVariable int id) {
+	public Optional<Book> retrieveLivro(@PathVariable Integer id) {
+		System.out.println(id);
 		Optional<Book> book = bookRepository.findById(id);
 		if (book == null)
 			throw new BookNotFoundException("Não foi encontrado o Livro com o ID: " + id);
@@ -39,7 +40,7 @@ public class BookDbControler {
 	}	
 	
 	@DeleteMapping("/db/book/{id}")
-	public void deleteBook(@PathVariable int id) {
+	public void deleteBook(@PathVariable Integer id) {
 		bookRepository.deleteById(id);
 	}
 	
